@@ -1,0 +1,8 @@
+- imgs_path = "#{APP_PATH}/public/photos/#{@type}"
+- photos = Dir.glob("#{imgs_path}/*.jpg").map{ |p| File.basename(p, "*") }.sort_by{ |p| p.to_i }
+- # .map{ |n| puts n; n }
+#over
+  #gallery.photos
+    - photos.each_with_index do |photo, idx|
+      .photo
+        %img{ src: "/photos/#{@type}/#{photo}" }      
