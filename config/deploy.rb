@@ -1,8 +1,7 @@
 
 set :application, "eli"
 
-#set :domain,      "krikri.makevoid.com"
-set :domain,      "ovh.makevoid.com"
+set :domain,      "makevoid.com"
 
 # git
 
@@ -35,6 +34,8 @@ role :db,  domain, :primary => true
 
 
 after :deploy, "deploy:cleanup"
+
+after :deploy, "deploy:link_photos"
 #after :deploy, "db:seeds"
 
 namespace :deploy do
@@ -43,6 +44,12 @@ namespace :deploy do
   task :restart, :roles => :app do
     run "touch #{current_path}/tmp/restart.txt"
   end
+  
+  desc "Link photos"
+  task :link_photos, :roles => :app do
+    run "cd #{current_path}/public; ln -s #{deploy_to}/shared/photos photos"
+  end
+
   
 end
 
