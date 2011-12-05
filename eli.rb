@@ -20,6 +20,7 @@ get "/editorial" do
 end
 
 sub_galleries = [
+  "editorial/ophelia"              ,
   "editorial/grand_hotel_lynch"              ,
   "editorial/pauline"                        ,
   "editorial/much_madness_is_divinest_sense" ,

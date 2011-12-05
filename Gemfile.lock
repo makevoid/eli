@@ -5,7 +5,7 @@ GEM
     rack (1.2.2)
     sinatra (1.2.3)
       rack (~> 1.1)
-      tilt (< 2.0, >= 1.2.2)
+      tilt (>= 1.2.2, < 2.0)
     tilt (1.2.2)
     voidtools (0.2.2)
 
