@@ -1,7 +1,7 @@
 
 set :application, "eli"
 
-set :domain, "kim.makevoid.com" # old: makevoid.com
+set :domain, "kim.makevoid.com" # old: makevoid.com # old: makevoid.com
 
 # git
 
