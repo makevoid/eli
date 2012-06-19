@@ -66,6 +66,21 @@ next_photo = ->
     pos++
     update_pos()
 
+prev_photo = ->
+  if $("#prev").hasClass "enabled"
+    pos--
+    update_pos()
+
+$(window).on "keydown", (evt) ->
+  left = 37
+  right = 39
+  if evt.keyCode == left
+    prev_photo()
+  else if evt.keyCode == right
+    next_photo()
+    
+  
+
 $(".photo img").click ->
   next_photo()
 
@@ -73,9 +88,7 @@ $("#next").click ->
   next_photo()
 
 $("#prev").click ->
-  if $(this).hasClass "enabled"
-    pos--
-    update_pos()
+  prev_photo()
 
 setTimeout(enableNext, 1500)
 setTimeout(revealPhoto, 500)

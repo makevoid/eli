@@ -95,25 +95,26 @@ $links: #444
   src: url('/fonts/impact.otf')
   
 body
-  background: $bg
   font-family: sans-serif, Helvetica, Arial, Verdana
-  color: $txt
   font-size: 120%
-
-body.dark
   background: $txt
   color: $bg
 
+body.dark
+  background: $bg
+  color: $txt
+
 a
-  color: $links
   font-weight: bold
+  color: $bg - #222
 a:hover
   color: $links + #222
-
-.dark a
-  color: $bg - #222
+  
+.dark a  
+  color: $links
 .dark a:hover
-  color: $bg + #111
+  color: #000
+
   
 #container
   min-width: 500px
@@ -213,10 +214,10 @@ header
   float: left
   display: block
   text-align: left
-  background: #EEE
+  background: #333
 
 .dark .desk
-  background: #333
+  background: #EEE
     
 #prev, #next
   width: 4%
@@ -249,15 +250,16 @@ header
 #invert_bg
   width: 20px
   height: 20px
-  background: $txt
   cursor: pointer
   +border-radius(40px)
-#invert_bg:hover
+#invert_bg:hover, .dark #invert_bg:hover  
   background: #666
 
-
-.dark #invert_bg
+#invert_bg
   background: $bg
+
+.dark #invert_bg  
+  background: $txt
   
 .small.distant
   margin: 20px 0 10px

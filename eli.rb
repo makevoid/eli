@@ -20,6 +20,8 @@ get "/editorial" do
 end
 
 sub_galleries = [
+  "editorial/displaced"              ,
+  "editorial/lost_highway"              ,
   "editorial/ophelia"              ,
   "editorial/grand_hotel_lynch"              ,
   "editorial/pauline"                        ,
@@ -27,7 +29,7 @@ sub_galleries = [
   "editorial/faith_and_ambiguity"            ,
   ]
 
-galleries = %w(fashion portrait) + sub_galleries
+galleries = %w(fashion portrait personal) + sub_galleries
 galleries.flatten.each do |gallery|
   get "/#{gallery}" do
     @type = gallery

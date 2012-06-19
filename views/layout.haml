@@ -1,14 +1,14 @@
 %html
   %head
-    %title 
+    %title
       Elisabetta
       Porcinai
     %link{ href: "/css/main.css", rel: "stylesheet" }
     %meta{ charset: "utf-8" }
     %meta{ :"http-equiv" => "X-UA-Compatible", content: "IE=edge,chrome=1" }
     %meta{ name: "description", content: "Elisabetta Porcinai - Photography - Enter the site and view my Portfolio - see photo galleries: Fashion, Portrait, Editorial and contact me." }
-    %meta{ name: "keywords", content: "elisabetta, porcinai, photography, , " }    
-    %meta{ name: "author", content: "Francesco 'makevoid' Canessa" }    
+    %meta{ name: "keywords", content: "elisabetta, porcinai, photography, , " }
+    %meta{ name: "author", content: "Francesco 'makevoid' Canessa" }
     %meta{ property: "og:title", content: "Elisabetta Porcinai - Photography" }
     %meta{ property: "og:url", content: "http://elisabettaporcinai.com" }/
     %meta{ property: "og:type", content: "website" }/
@@ -16,8 +16,8 @@
     %meta{ property: "og:image", content: "http://elisabettaporcinai.com/imgs/elisabetta_porcinai_fb.png" }/
     %meta{ property: "fb:admins", content: "elisabetta.porcinai, makevoid" }/
     -# %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
-    
-    
+
+
     %script{ src: "/js/modernizr.js", type: "text/javascript" }
 
   %body.dark
@@ -25,32 +25,34 @@
       #prev <
       #next >
     #container
-      
+
       .handles
         #invert_bg
       %header
-        %h1 
+        %h1
           %a{ href: "/" }
-            Elisabetta 
+            Elisabetta
             %span.p Porcinai
             %span.grasso .
         .headline Photography
       %ul#nav
         %li
           - link_to "Fashion", "/fashion"
-        %li 
+        %li
           - link_to "Portrait", "/portrait"
-        %li 
+        %li
           - link_to "Links", "/links"
         .clear
         %li
           - link_to "Editorial", "/editorial"
+        %li
+          - link_to "Personal", "/personal"
         /
-          %li 
+          %li
             - link_to "Blog", "/blog"
-        %li 
+        %li
           - link_to "Contact", "/contact"
-      
+
       .clear
       #content
         = yield
@@ -59,7 +61,7 @@
     %script{ src: "/js/master.js", type: "text/javascript" }
     :javascript
       document.write(unescape('%3Cscript type="text/javascript" src="'+document.location.protocol+'//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/5433.js"%3E%3C%2Fscript%3E'))
-  
+
     - if ENV["RACK_ENV"] == "production"
       %script{ :type => "text/javascript" }
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
