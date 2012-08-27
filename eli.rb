@@ -19,6 +19,11 @@ get "/editorial" do
   haml :editorial
 end
 
+
+get "/personal" do
+  haml :personal
+end
+
 sub_galleries = [
   "editorial/see_me_not"              ,
   "editorial/teen_dream"              ,
@@ -29,9 +34,12 @@ sub_galleries = [
   "editorial/pauline"                        ,
   "editorial/much_madness_is_divinest_sense" ,
   "editorial/faith_and_ambiguity"            ,
+  "personal/one"            ,
+  "personal/two"            ,
+  "personal/three"            ,
   ]
 
-galleries = %w(fashion portrait personal) + sub_galleries
+galleries = %w(fashion portrait music) + sub_galleries
 galleries.flatten.each do |gallery|
   get "/#{gallery}" do
     @type = gallery
