@@ -5,7 +5,7 @@
   //behavior: url('/border-radius.htc')
   -moz-border-radius: $radius
   -webkit-border-radius: $radius
-  
+
 =border-radius-bottom($radius)
   border-bottom-left-radius: $radius
   border-bottom-right-radius: $radius
@@ -23,22 +23,22 @@
   -moz-border-radius-topright: $radius
   -webkit-border-top-left-radius: $radius
   -webkit-border-top-right-radius: $radius
-  
+
 =simple_gradient($start_color, $end_color)
   background: $start_color
-  background-image: -moz-linear-gradient(top, $start_color 0%, $end_color 100%) 
+  background-image: -moz-linear-gradient(top, $start_color 0%, $end_color 100%)
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start_color), color-stop(100%,$end_color))
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start_color', endColorstr='$end_color',GradientType=0 )
-  
+
 =simple_gradient_tri($start, $stop, $end)
   background: $start
-  background-image: -moz-linear-gradient(top, $start 0%, $stop 50%, $end 100%) 
+  background-image: -moz-linear-gradient(top, $start 0%, $stop 50%, $end 100%)
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start), color-stop(50%,$start), color-stop(100%,$end))
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 )
 
 =gradient_tri($start, $stop, $end, $perc1, $perc2, $perc3)
   background: $start
-  background-image: -moz-linear-gradient(top, $start $perc1, $stop $perc2, $end $perc3) 
+  background-image: -moz-linear-gradient(top, $start $perc1, $stop $perc2, $end $perc3)
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop($perc1,$start), color-stop($perc2,$stop), color-stop($perc3,$end))
 
 =simple_gradient_half($start_color, $stop_color, $restart_color, $end_color)
@@ -58,14 +58,14 @@
   margin: 0
   padding: 0
 
-html, body 
-  height: 100%     
+html, body
+  height: 100%
   max-height: 100%
-  
+
 img
   border: 0
 
-ul 
+ul
   list-style-type: none
 
 li
@@ -74,9 +74,9 @@ li
 .clear
   clear: both
 
-a 
+a
   text-decoration: none
-  
+
 // style
 
 $bg: #FFF
@@ -88,12 +88,12 @@ $links: #444
 
 @font-face
   font-family: Impact
-  src: url('/fonts/impact.eot') /* IE 6,7,8 */  
-  
+  src: url('/fonts/impact.eot') /* IE 6,7,8 */
+
 @font-face
   font-family: Impact
   src: url('/fonts/impact.otf')
-  
+
 body
   font-family: sans-serif, Helvetica, Arial, Verdana
   font-size: 120%
@@ -109,22 +109,22 @@ a
   color: $bg - #222
 a:hover
   color: $links + #222
-  
-.dark a  
+
+.dark a
   color: $links
 .dark a:hover
   color: #000
 
-  
+
 #container
   min-width: 500px
   width: 85%
-  margin: 0 auto 40px 
+  margin: 0 auto 40px
   padding-top: 30px
   // max-width: 1000px
-p 
+p
   font-size: 0.9em
-  
+
 h1
   font-size: 1.7em
   margin-bottom: 1px
@@ -148,10 +148,10 @@ h1
   text-transform: uppercase
   letter-spacing: 0.62em
 
-h2 
+h2
   margin-bottom: 15px
-  
-#nav  
+
+#nav
   float: left
   font-family: Impact
   text-transform: uppercase
@@ -165,16 +165,16 @@ h2
   a
     color: $links + #111
     font-weight: normal
-  a:hover    
+  a:hover
     color: $links + #333
 .handles
   float: right
   margin-top: 18px
-  
-header  
+
+header
   float: left
   position: relative
-  
+
 #home img
   width: 100%
   opacity: 0
@@ -218,7 +218,7 @@ header
 
 .dark .desk
   background: #EEE
-    
+
 #prev, #next
   width: 4%
   height: 100%
@@ -236,45 +236,48 @@ header
 #prev:hover, #next:hover
   color: #000
   background: #999
-#prev.enabled, #next.enabled  
+#prev.enabled, #next.enabled
   cursor: pointer
   opacity: 0.3
 #prev.enabled:hover, #next.enabled:hover
   opacity: 0.5
-    
+
 #prev
 
 #next
   right: 0
-    
+
 #invert_bg
   width: 20px
   height: 20px
   cursor: pointer
   +border-radius(40px)
-#invert_bg:hover, .dark #invert_bg:hover  
+#invert_bg:hover, .dark #invert_bg:hover
   background: #666
 
 #invert_bg
   background: $bg
 
-.dark #invert_bg  
+.dark #invert_bg
   background: $txt
-  
+
 .small.distant
   margin: 20px 0 10px
   font-size: 0.8em
-  
+
 .links a
   display: block
   line-height:  1.4em
-  
+
 #nav2
   margin: 120px  0
 
   font-size: 0.8em
   text-transform: uppercase
   letter-spacing: 0.52em
+  font-weight: normal
   li
     display:  block
     margin: 20px 0
+  a
+    font-weight: normal
