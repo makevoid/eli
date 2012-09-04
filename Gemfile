@@ -9,3 +9,9 @@ gem 'sinatra'
 
 gem 'voidtools'
 # gem 'moka' # TODO: gemify me please
+
+group :development do
+  gem 'guard'
+  gem 'guard-sass'
+  gem 'guard-livereload'
+end
