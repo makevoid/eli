@@ -47,6 +47,10 @@ galleries.flatten.each do |gallery|
   end
 end
 
+get "/press" do
+  haml :press
+end
+
 get "/contact" do
   haml :contact
 end

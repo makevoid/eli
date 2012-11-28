@@ -142,14 +142,16 @@ header {
 
 .desk {
   display: block;
-  width: 600px;
-  height: 250px;
+  width: 80%;
+  min-height: 250px;
   margin: 0 auto;
   padding: 20px;
   float: left;
   display: block;
   text-align: left;
   background: #333333; }
+  .desk ul li img {
+    display: block; }
 
 .dark .desk {
   background: #eeeeee; }
@@ -219,3 +221,6 @@ header {
     margin: 20px 0; }
   #nav2 a {
     font-weight: normal; }
+
+.press img {
+  width: 60%; }
