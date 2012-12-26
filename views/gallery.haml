@@ -1,8 +1,15 @@
 - imgs_path = "#{APP_PATH}/public/photos/#{@type}"
 - photos = Dir.glob("#{imgs_path}/*.jpg").map{ |p| File.basename(p, "*") }.sort_by{ |p| p.to_i }
+
+- if @type == "music"
+  - titles = File.read("#{imgs_path}/titles.txt").split("\n")
 - # .map{ |n| puts n; n }
 #over
   #gallery.photos
     - photos.each_with_index do |photo, idx|
       .photo
-        %img{ src: "/photos/#{@type}/#{photo}" }      
+        %img{ src: "/photos/#{@type}/#{photo}" }
+
+        - if @type == "music"
+          .title
+            = titles[idx]

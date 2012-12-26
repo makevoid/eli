@@ -139,6 +139,10 @@ header {
       #over #gallery.photos .photo img {
         cursor: pointer;
         margin: 0 auto; }
+      #over #gallery.photos .photo .title {
+        font-size: 0.9em;
+        margin: 5px 0 0 10px;
+        text-align: left; }
 
 .desk {
   display: block;
